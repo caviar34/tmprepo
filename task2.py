@@ -52,6 +52,6 @@ def index2index(ind):
 
 if __name__ == "__main__":
     sequence=str(sys.argv[1]) 
-    assert(find_sequence_slow(sequence) == find_sequence(sequence))
+    #assert(find_sequence_slow(sequence) == find_sequence(sequence))
     print find_sequence(sequence)
 
