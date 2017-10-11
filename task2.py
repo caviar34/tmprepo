@@ -25,7 +25,6 @@ def find_last_index(sequence):
             if S in S2: return int(stest)
             stest = str(int(stest)+1)
             S2+=stest
-            #print "S2:",S2
 
 def make_minimal_substr(sequence,index):
     minimal_substr=""
@@ -34,20 +33,12 @@ def make_minimal_substr(sequence,index):
         index -=1
     return (index+1,minimal_substr)
 
-def index2indexbad(Listindex):
-    indexofstr=0
-    strListindex=str(Listindex)
-    for i in xrange(0,len(strListindex)):
-        print i, int(strListindex[::-1][i])
-        indexofstr+=(10**i)*9*int(strListindex[::-1][i])
-    return indexofstr
 
 def index2index(ind):
     strind=str(ind)
     indofstr=len(strind)*ind
     for i in xrange(0,len(strind)-1):
         indofstr-=9*10**i*(len(strind)-i-1)
-        #print indofstr
     return indofstr-len(strind)
 
 if __name__ == "__main__":
